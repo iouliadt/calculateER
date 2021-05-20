@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(
         description='Calculate the rate of evolution between two time points.')
 
 parser.add_argument('-f', '--fasta', required=True,
-                    help='Path to multifasta file with the two consensus sequences')
+                    help='Path to aligned multifasta file with the two consensus sequences')
 parser.add_argument('-d1', '--date1', required=True,
                     help='Respective date of the first sequence in the format of: dd/mm/yyyy')
 parser.add_argument('-d2', '--date2', required=True,
@@ -57,8 +57,8 @@ except ValueError:
     raise ValueError("Incorrect data format, should be dd/mm/yyyy")
 
 
-# Calculate the number of days between the two dates
-delta = d2 - d1
+# Calculate the absolute number of days between the two dates
+delta = abs(d2 - d1)
 days = delta.days
 
 # Divide sub per site by the days to get sub per site per day
