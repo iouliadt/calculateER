@@ -20,7 +20,7 @@ optional arguments:
 
 #### Input:
 
-* The -f input should be a multi-fasta file with the two consensus sequences of interest. 
+* The -f input should be a multi-fasta file with the two aligned consensus sequences of interest. 
 
 Example:
 
