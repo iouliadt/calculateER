@@ -11,7 +11,7 @@ optional arguments:
 
   -h, --help            show this help message and exit
   -f FASTA, --fasta FASTA
-                        Path to multifasta file with the two consensus sequences
+                        Path to aligned multifasta file with the two consensus sequences
   -d1 DATE1, --date1 DATE1
                         Respective date of the first sequence in the format of: dd/mm/yyyy
   -d2 DATE2, --date2 DATE2
