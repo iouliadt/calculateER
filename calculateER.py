@@ -24,8 +24,15 @@ if not vars(args) or len(sys.argv) <= 2:
 
 # Parse fasta file
 records = list(SeqIO.parse(args.fasta, "fasta"))
-seq1 = list(records[0].seq)
-seq2 = list(records[1].seq)
+
+print("Processing sequences {} and {}".format(records[1].id, records[2].id))
+
+if len(records) == 2:
+    seq1 = list(records[0].seq)
+    seq2 = list(records[1].seq)
+else:
+    seq1 = list(records[1].seq)
+    seq2 = list(records[2].seq)
 
 # Check if the sequences have the same length
 if len(seq1) != len(seq2):
