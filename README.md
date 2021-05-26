@@ -36,3 +36,28 @@ dd/mm/yyyy
 
 Example:
 6/5/2021
+
+
+# calculateER
+This pipeline uses [svartools](https://github.com/iouliadt/svartools) to extract a gene specified by the user and then calculates he average number of substitutions per site per year using calculateER.
+
+```
+usage: calculateERperGene.sh multifasta_withref.fasta genbankFile.gb gene date1 date2
+
+```
+
+#### Input:
+
+* The first entry of the multifasta alignment must be the reference sequence.
+
+Example:
+
+\>referenceID description \
+AAGTAGGAATAATATCTTATCATTATAGATAAAAACCTTCTGAATTTGCTTAGTGTGTAT \
+ACGACTAGACATATATCAGCTCGCCGATTATTTGGATTATTCCCTG \
+\>sequenceID-001 description \
+AAGTAGGAATAATATCTTATCATTATAGATAAAAACCTTCTGAATTTGCTTAGTGTGTAT \
+ACGACTAGACATATATCAGCTCGCCGATTATTTGGATTATTCCCTG \
+\>sequenceID-002 description \
+CAGTAAAGAGTGGATGTAAGAACCGTCCGATCTACCAGATGTGATAGAGGTTGCCAGTAC \
+AAAAATTGCATAATAATTGATTAATCCTTTAATATTGTTTAGAATA
