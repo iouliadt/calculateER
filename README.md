@@ -38,12 +38,13 @@ Example:
 6/5/2021
 
 
-# calculateER
+
+
+# calculateERperGene
 This pipeline uses [svartools](https://github.com/iouliadt/svartools) to extract a gene specified by the user and then calculates he average number of substitutions per site per year using calculateER.
 
 ```
 usage: calculateERperGene.sh multifasta_withref.fasta genbankFile.gb gene date1 date2
-
 ```
 
 #### Input:
