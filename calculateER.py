@@ -48,7 +48,7 @@ changes = 0
 # Count the nucleotide changes between the two sequences
 for nuc in range(len(seq1)):
     if seq1[nuc] != seq2[nuc]:
-        if seq1[nuc] != "N" and seq2[nuc] != "N" and seq1[nuc] != "-" and seq2[nuc] != "-":
+        if seq1[nuc] not in ['n', 'N', '-'] and seq2[nuc] not in ['n', 'N', '-']:
             changes += 1
 
 print("The number of nucleotide changes between the two sequences, ignoring gaps and N characters, is {}".format(changes))
